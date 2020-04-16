@@ -1,0 +1,20 @@
+.footer{
+    background-color: $main-color;
+    align-items: center;
+    text-align: center;
+    &--text{
+        margin: 20px 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+
+        & a{
+            font-weight: 400;
+            text-decoration: none;
+            color: #fff;
+        }
+        & a:hover{
+            color: #bbb;
+        }
+    }
+}

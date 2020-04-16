@@ -1,0 +1,182 @@
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+
+
+    @include display(phone){
+        width: 740px;
+    }
+
+    @include display(tablet){
+        width: 940px;
+    }
+
+    @include display(desktop){
+        width: 1140px;
+    }
+}
+
+.col{
+    &-row{
+        // width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }    
+
+    &-1{
+       width: calc(100% / 12);
+       padding: 0 10px;
+        width: 100%;
+        padding: 0 10px;
+
+        @include display(phone){
+            width: 50%;
+        }
+    
+        @include display(tablet){
+            width: calc(100% / 12);
+        }
+    
+        @include display(desktop){
+            width: calc(100% / 12);
+        }
+    }
+
+    &-2{
+        width: calc(100% / 6);
+        padding: 0 10px;
+    }
+
+    &-3{
+        width: calc(100% / 4);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-3{
+        width: 100%;
+        padding: 0 10px;
+
+        @include display(phone){
+            width: 50%;
+        }
+    
+        @include display(tablet){
+            width: calc(100% / 4);
+        }
+    
+        @include display(desktop){
+            width: calc(100% / 4);
+        }
+    }
+
+    &-4{
+        width: calc(100% / 3);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+
+        
+    }
+
+    &-5{
+        width: calc((100% / 12) * 5);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-6{
+        width: calc(100% / 2);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-7{
+        width: calc((100% / 12) *7);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-8{
+        width: calc((100% / 12) *8);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-9{
+        width: calc((100% / 12) *9);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-10{
+        width: calc((100% / 12) *10);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-11{
+        width: calc((100% / 12) *11);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+
+    &-12{
+        width: calc(100%);
+        padding: 0 10px;
+
+        @include display(phone-tablet){
+            width: 100%;
+        }
+    }
+}
+
+.align-items{
+    &-start{
+        align-items: flex-start;
+    }
+
+    &-center{
+        align-items: center;
+    }
+
+    &-end{
+        align-items: flex-end;
+    }
+}
+
+.align-self{
+    &-stretch{
+        align-self: stretch;
+    }
+}

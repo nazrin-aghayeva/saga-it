@@ -1,0 +1,393 @@
+$body-bg: transparent;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    font-family: 'RedHat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+.header{
+    align-items: center;
+    background-image: linear-gradient(rgba(82, 79, 79, 0.521), rgba(92, 89, 89, 0.5)), url(../image/image.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    margin-top: 0;
+    &--logo{
+    margin: 0 30px;
+    display: flex;
+    justify-content: flex-start;
+        & img{
+            margin-top: 5px;
+            width: 180px;
+            height: 180px;
+        }
+    }
+    &--logo-2{
+        display: flex;
+        justify-content: flex-start;
+        display: none;
+        margin: 0 30px;
+        & img{
+            height: 100px;
+            width: 100px;
+            margin: 5px 0;
+        }
+    }
+    &--nav{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 50px;
+        margin-top: -95px;
+        & li{
+            display: inline-block;
+            list-style: none;
+            margin-right: 25px;
+            
+            & a{
+                text-decoration: none;
+                color: #fff;
+            }
+            & a:hover,
+            & a:active{
+            border-bottom: 2px solid rgb(125, 194, 194);
+            transition: border-bottom 0.2s;
+            padding-bottom: 1px;
+            }
+        }
+    }
+    &--content{
+        &--title{
+            color: #fff;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            word-spacing: 2px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 44px;
+            font-weight: 400;
+            line-height: 52px;
+
+            animation-name: moveInLeft;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+        }
+     
+    }
+    .text-box{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }  
+    &--btn{
+        align-items: center;
+        display: inline-block;
+        margin: 35px 0;
+        text-align: center;
+        padding: 15px 30px;
+        font-weight: 300;
+        font-size: 28px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        border-radius: 200px;
+        transition: all 0.2s;
+        background-color: rgba(106, 168, 168, 0.911);
+        border: 1px solid rgb(98, 151, 150);
+        color: #fff;
+    }
+    &--btn:hover,
+    &--btn:active{
+        box-shadow: -8px -6px 172px -30px rgba(255,255,255,0.71);
+        background-color: rgba(83, 150, 150, 0.911) ;
+        border: 1px solid rgb(86, 141, 140);
+    }
+}
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .header--nav { margin-top: -30px; }
+
+.sticky .header--nav li a:link,
+.sticky .header--nav li a:visited {
+    padding: 1px 0;
+    color: #555;
+}
+
+.sticky .header--logo { 
+  display: none;
+}
+.sticky .header--logo-2{
+    display: block;
+}
+
+
+.information{
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--content{
+        &--title{
+            font-weight: 500;
+            color: rgb(80, 79, 79); 
+            font-size: 45px;
+        }
+        &--text{
+            font-size: 22px;
+            line-height: 25px;
+            word-spacing: 3px;
+            color: rgb(80, 79, 79); 
+            text-align: justify; 
+        }
+
+    //     animation-name: moveInLeft;
+    //     animation-duration: 1s;
+    //    animation-timing-function: ease-out;
+    }
+    &--image{
+        & img{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 5px;
+        }
+
+    //     animation-name: moveInRight;
+    //     animation-duration: 1s;
+    //    animation-timing-function: ease-out;
+    }
+}
+
+/*-----------------------------------*/
+/* ------------ADDITIONS--------------*/
+/*-----------------------------------*/
+.align-items-center{
+    align-items: center;
+}
+
+.text-align-center{
+    text-align: center
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mt-80{
+    margin-top: 80px;
+}
+
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    80%{
+        transform: translate(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+
+    80%{
+        transform: translate(-5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.information-2{
+background-image: linear-gradient(rgba(233, 219, 219, 0.897), rgba(233, 219, 219, 0.897)), url(../image/iphone-desk-computer-writing-working-table-764783-pxhere.com.jpg);
+background-size: cover;
+object-fit: cover;
+background-attachment: fixed;
+height: 100%;
+width: 100%;
+    & img{
+        display: flex;
+        justify-content: flex-start;
+        margin: 15px 0;
+        width: 50px;
+        height: 50px;
+    }
+    & img:hover,
+    & img:active{
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    &--content{
+        margin-right: 16px;
+        &--title{
+            font-size: 25px;
+            font-weight: 400;
+            word-spacing: 5px;
+            margin: 15px 0;
+        }
+        &--text{
+            font-size: 22px;
+            line-height: 25px;
+            text-align: justify;
+            font-weight: 300;
+            // color: rgb(62, 62, 62)
+            color:rgb(29, 29, 29);
+        }
+    }
+}
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
+
+
+.information-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--image{
+        & li{
+            display: inline-block;
+            &:not(:last-child){
+                margin-right: 45px;
+            }
+            & img{
+                height: 200px;
+                width: 220px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+/*-----------------------------------*/
+/* ------------CAROUSEL--------------*/
+/*-----------------------------------*/
+.information-3{
+    display: flex;
+    justify-content: center;
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 30px 50px;
+}
+/* image*/
+.carousel-image{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    // margin-left: 479px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  display: none;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+}
+

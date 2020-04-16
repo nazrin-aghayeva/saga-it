@@ -1,0 +1,38 @@
+@font-face {
+    font-family: RedHat;
+    src: url("RedHatText-Bold.ttf") format("woff");
+    font-weight: bold; }
+
+@font-face {
+    font-family: RedHat;
+    src: url("RedHatText-BoldItalic.ttf") format("woff");
+    font-weight: bold;
+    font-style: italic; }
+
+@font-face {
+    font-family: RedHat;
+    src: url("RedHatText-Medium.ttf") format("woff");
+    font-weight: 500; }
+    
+@font-face {
+    font-family: RedHat;
+    src: url("RedHatText-MediumItalic.ttf") format("woff");
+    font-weight: 500;
+    font-style: italic; }
+
+@font-face {
+    font-family: RedHat;
+    src: url("RedHatText-Regular.ttf") format("woff");
+    font-weight: 400; }
+
+@font-face {
+    font-family: RedHat;
+    src: url("RedHatText-RegularItalic.ttf") format("woff");
+    font-weight: 400; 
+    font-style: italic; }
+      
+      
+      
+      
+    
+  
